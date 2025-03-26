@@ -7,6 +7,7 @@ metadata:
     version: {{ .Values.version | quote }}
 spec:
   predictor:
+    runtime: kserve-tensorflow-serving  #kserve tensorflow serving이 업데이트 안되는 문제 발생
     model:
       modelFormat:
         name: {{ .Values.modelFormat }}
